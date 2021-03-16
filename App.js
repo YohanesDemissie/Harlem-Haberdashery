@@ -8,26 +8,15 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 
+import Home from './Components/Home.js';
+
 function Feed({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
+    <View style={{marginLeft: '1%', marginTop: '10%' }}>
       <Button
-        title="Open drawer"
+        title="Menu"
         onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
       />
-      <Button
-        title="Toggle drawer"
-        onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-      />
-    </View>
-  );
-}
-
-function Notifications() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications Screen</Text>
     </View>
   );
 }
@@ -35,15 +24,11 @@ function Notifications() {
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
       <DrawerItem
-        label="Close drawer"
+        label="Close Menu X"
         onPress={() => props.navigation.dispatch(DrawerActions.closeDrawer())}
       />
-      <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.dispatch(DrawerActions.toggleDrawer())}
-      />
+      <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
 }
@@ -53,8 +38,8 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
+      <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Notifications" component={Notifications} />
     </Drawer.Navigator>
   );
 }
