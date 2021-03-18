@@ -9,7 +9,7 @@ import Gallery from './Gallery';
 const Home = ({ navigation }) =>{
   return(
     <React.Fragment>
-      <Menu navigation={navigation}/>
+      <Menu navigation={navigation} />
       <Gallery />
     </React.Fragment>
   );

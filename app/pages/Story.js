@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image, StyleSheet, ScrollView, View } from 'react-native';
+import { Text, Image, StyleSheet, ScrollView, View, Linking } from 'react-native';
 
 import Menu from '../components/Menu';
 import hhStoryImage from '../../assets/hhStoryImage.png';
@@ -13,7 +13,7 @@ const Story =({navigation})=> {
       <Menu navigation={navigation} />
       <Text style={styles.header}>Our Story...</Text>
       <View style={styles.breakLine} />
-      <Image style={styles.storyImage} source={hhStoryImage} />
+      <Image style={styles.storyImage} source={hhStoryImage} onPress={Linking.openURL('google.com')}/>
       <View style={styles.breakLine} />
         <Text style={styles.textStyle}>​HARLEM HABERDASHERY IS the retail expression of 5001 FLAVORS, a custom-made apparel company creating looks for celebrities, recording artists and sports stars for over 20 years.
         {"\n"}

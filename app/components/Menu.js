@@ -12,3 +12,5 @@ export default ({ navigation }) => {
     </View>
   )
 }
+
+// style={{ left: 0}}
