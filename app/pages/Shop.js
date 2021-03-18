@@ -9,8 +9,8 @@ const Shop = ({navigation}) =>{
   return(
     <ScrollView>
 
+      <Menu navigation={navigation}  />
       <View style={styles.shopStyles}>
-        <Menu navigation={navigation} />
         <Text style={{fontSize: 40, marginTop: 20}}>Shop</Text>
         <View style={styles.breakLine} />
 

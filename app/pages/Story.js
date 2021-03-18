@@ -8,9 +8,9 @@ import Footer from './Footer';
 
 const Story =({navigation})=> {
   return(
-    <View style={styles.viewStyle}>
     <ScrollView>
-      <Menu navigation={navigation} />
+      <Menu navigation={navigation} style={{textAlign: 'center'}}/>
+    <View style={styles.viewStyle}>
       <Text style={styles.header}>Our Story...</Text>
       <View style={styles.breakLine} />
       <Image style={styles.storyImage} source={hhStoryImage} onPress={Linking.openURL('google.com')}/>
@@ -32,8 +32,8 @@ const Story =({navigation})=> {
         {"\n"}
         <Footer />
         </Text>
-    </ScrollView>
     </View>
+    </ScrollView>
   )
 }
 

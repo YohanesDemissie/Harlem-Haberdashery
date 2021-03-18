@@ -4,7 +4,7 @@ import { DrawerActions } from '@react-navigation/native';
 
 export default ({ navigation }) => {
   return(
-    <View style={{ display: 'block', marginLeft: '1%', marginTop: '10%', zIndex: 1 }}>
+        <View style={{flexDirection: 'row', marginTop: '10%'}}>
       <Button
         title="Menu"
         onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
@@ -12,5 +12,3 @@ export default ({ navigation }) => {
     </View>
   )
 }
-
-// style={{ left: 0}}
